@@ -1,0 +1,15 @@
+
+Demo: https://szriafan.github.io/simple-spa/app
+
+一、路由规则
+
+将获取到的Location对象的锚点通过“-”分隔符解析成一个数组。如果数组元素只有一个，则只对应一级导航菜单项，要加载的html片段的文件名为该元素的值；如果元素有两个，第一个元素对应一级导航菜单项要加载的html片段的文件名，锚点除去“#”部分对应二级导航菜单项加载的html片段的文件名。比如说点击锚点#menu1会加载menu1.html，而点击锚点#menu1-1会依次加载menu1.html和menu1-1.html。
+
+二、部署
+
+1. 安装nodejs: https://nodejs.org/en/
+2. 打开命令行程序，切换到当前工程的根路径
+3. > npm install安装grunt及插件
+4. > grunt将app中的文件合并压缩后打包到dist文件夹中
+
+最终分发dist文件夹的文件

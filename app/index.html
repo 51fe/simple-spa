@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SPA</title>
+  <meta charset="utf-8">
+  <!-- build:css css/index.css -->
+  <link rel="stylesheet" href="css/libs/normalize.css">
+  <link rel="stylesheet" href="css/libs/grid.css">
+  <link rel="stylesheet" href="css/libs/navs.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+  <div class="container">
+    <ul class="nav nav-pills nav-stacked col-md-2 row">
+      <li><a href="#home" data-toggle="pill">Home</a></li>
+      <li><a href="#menu1-1" data-toggle="pill">Menu 1</a></li>
+      <li><a href="#menu2-1" data-toggle="pill">Menu 2</a></li>
+      <li><a href="#about" data-toggle="pill">About</a></li>
+    </ul>
+    <div class="pull-right col-md-10" id="mainContent"></div>
+  </div>
+  <!-- build:js js/index.js -->
+  <script src="js/libs/jquery.js"></script>
+  <script src="js/route.js"></script>
+  <script src="js/index.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
+
