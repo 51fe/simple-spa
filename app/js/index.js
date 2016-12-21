@@ -17,14 +17,14 @@ if (location.hash == '') {
   $(window).on('hashchange', function() {
     var hash = $.trim(location.hash).split('-')[0];
     // 加载一级导航菜单模板
+    // 设置导航菜单选中状态
+    route.setActive(pills, hash);
     route.loadTemplate($('#mainContent'), hash, function() {
-      // 设置一级导航菜单选中状态
-      route.setActive(pills, hash);
       hash = location.hash;
       // 加载二级导航菜单模板
+      // 设置导航菜单选中状态
+      route.setActive($('.nav-tabs'), hash);
       $('#subContent').load('tpl/' + hash.substring(1) + '.html', function() {
-        // 设置二级导航菜单选中状态
-        route.setActive($('.nav-tabs'), hash);
       });
     });
   }).trigger('hashchange');
